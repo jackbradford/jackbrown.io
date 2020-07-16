@@ -1,0 +1,13 @@
+{
+    "name": "jackbradford/jackbrown.io",
+    "description": "My personal home on the web.",
+    "require": {
+        "jackbradford/disphatch": "dev-master"
+    },
+    "repositories": [
+        {
+            "type": "vcs",
+            "url": "https://github.com/jackbradford/disphatch"
+        }
+    ]
+}
