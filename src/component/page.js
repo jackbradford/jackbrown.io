@@ -6,9 +6,6 @@
  */
 import React, { Component } from 'react';
 import { Route, Switch } from 'react-router-dom';
-import Page from './page';
-import Home from './home';
-import ContactUs from './contact';
 
 export default class Root extends Component {
 
@@ -20,14 +17,11 @@ export default class Root extends Component {
 
         return (
             <React.Fragment>
-                <Route
-                    exact path='/'
-                    render={(props) => <Page> <Home {...props} /> </Page>}
-                />
-                <Route
-                    exact path='/contact'
-                    render={(props) => <Page> <ContactUs {...props} /> </Page>}
-                />
+                <header>
+                    <h1>Jack Brown</h1>
+                    <h2>Software Developer</h2>
+                </header>
+                { this.props.children }
             </React.Fragment>
         );
     }
