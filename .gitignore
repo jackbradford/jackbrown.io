@@ -5,9 +5,9 @@ error.log
 vendor/
 disphatch.conf.json
 htdocs/js/index.js
-htdocs/js/plantlogg.js
-htdocs/js/plantlogg.bundle.js
-htdocs/js/plantlogg.bundle.js.map
+htdocs/js/jackbrown-io.js
+htdocs/js/jackbrown-io.bundle.js
+htdocs/js/jackbrown-io.bundle.js.map
 htdocs/js/test.js
 htdocs/css/style.css
 htdocs/css/style.css.map
