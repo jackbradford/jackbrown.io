@@ -13,7 +13,7 @@
  *
  */
 
-$header-font-stack:		'Rozha One', serif;
+$header-font-stack:		'Playfair Display', serif;
 $font-stack:			'Open Sans Condensed', sans-serif;
 $platform-font-stack:	'Segoe UI', 'Lucida Grande', 'Ubuntu', sans-serif;
 $placeholder-color:     #999;
@@ -22,19 +22,61 @@ $placeholder-font-style:italic;
 
 $menu-text-shadow:		1px 1px 1px rgba(0,0,0,0.10);
 
-@mixin for-phone-only {
 
-	@media (max-width: 599px) { @content; }
+/**
+ * Color Palette
+ */
+$blue1: #000d16;
+$blue2: #001829;
+$blue3: #002139;
+$blue4: #003960;
+$blue5: #004a7d;
+$blue6: #246795;
+$blue7: #4484fb;
+$blue8: #6ba3ca;
+$blue9: #96c2e1;
+$blue10: #cbe4f5;
+$blue11: #dfeaf2;
+$blue12: #e7e8f0;
+
+$red1: #230600;
+$red2: #3c0b00;
+$red3: #530f00;
+$red4: #6d1400;
+$red5: #871900;
+$red6: #a82507;
+$red7: #b93f23;
+$red8: #c9634c;
+$red9: #d48775;
+$red10: #d4998b;
+$red11: #dab6ae;
+$red12: #e9dcd9;
+
+
+/**
+ * Device Widths
+ * These mixins define the device widths where the layout's breakpoints lie.
+ * 
+ * The layout for the smallest phones renders up to a width of 549px.
+ */
+@mixin for-smallest-phones {
+
+	@media (max-width: 549px) { @content; }
+}
+
+@mixin for-average-phones-up {
+
+    @media (min-width: 550px) { @content; }
 }
 
 @mixin for-tablet-portrait-up {
 
-	@media (min-width: 600px) { @content; }
+	@media (min-width: 800px) { @content; }
 }
 
 @mixin for-tablet-landscape-up {
 
-	@media (min-width: 900px) { @content; }
+	@media (min-width: 950px) { @content; }
 }
 
 @mixin for-desktop-up {
@@ -47,6 +89,10 @@ $menu-text-shadow:		1px 1px 1px rgba(0,0,0,0.10);
 	@media (min-width: 1800px) { @content; }
 }
 
+
+/**
+ * Input placeholders
+ */
 @mixin placeholder($selector, $color, $style) {
 
     #{$selector}::placeholder {
@@ -80,6 +126,10 @@ $menu-text-shadow:		1px 1px 1px rgba(0,0,0,0.10);
     }
 }
 
+
+/**
+ * Box shadows
+ */
 @mixin box-shadow($shadows...) {
 	-moz-box-shadow: 	$shadows;
 	-webkit-box-shadow:	$shadows;
@@ -103,6 +153,9 @@ $menu-text-shadow:		1px 1px 1px rgba(0,0,0,0.10);
 	);
 }
 
+/**
+ * Gradient Background
+ */
 @mixin linear-gradient-background($top-color, $bottom-color) {
 	background: -webkit-linear-gradient(
 		top,
