@@ -1,0 +1,67 @@
+/**
+ * @file _buttons.scss
+ * This file provides several button styles.
+ *
+ */
+button.error {
+
+	@include linear-gradient-background(#ef6b42, #ed4c2a);
+	border: 1px solid #d03514;
+	border-bottom-color: #94260e;
+
+	&:hover {
+
+		@include linear-gradient-background(#ed4c2a, #ef6b42);
+	}
+}
+
+button.generic {
+
+}
+
+button.primary-color {
+
+	color: #cfeddb;
+	@include linear-gradient-background(#3ea86a, #328655);
+	border: 1px solid #328655; // #184b94
+	border-bottom-color: #40584a;
+
+	&:hover {
+
+		@include linear-gradient-background(#328655, #3ea86a);
+	}
+}
+
+button.secondary-color {
+
+    // e2725b e18a78 (lighter)
+//	@include linear-gradient-background(#eac33c, #e8b503);
+	@include linear-gradient-background(#e29f5b, #e2725b);
+//	border: 1px solid #bc9408; // #184b94   e16248
+	border: 1px solid #e16248; // #184b94   e16248
+//	border-bottom-color: #a68205;
+	border-bottom-color: #e15336;
+
+	&:hover {
+
+		@include linear-gradient-background(#e2725b, #e29f5b);
+	}
+
+    &:focus {
+
+        outline: 1px #e15336 auto;
+    }
+}
+
+button.tertiary-color {
+
+	@include linear-gradient-background(#4d86da, #2a6bca);
+	border: 1px solid #2867c2; // #184b94
+	border-bottom-color: #245bac;
+
+	&:hover {
+
+		@include linear-gradient-background(#2a6bca, #4d86da);
+	}
+}
+
