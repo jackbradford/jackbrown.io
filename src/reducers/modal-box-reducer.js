@@ -25,7 +25,7 @@ export default function modalBoxes(
     switch (action.type) {
 
         case REGISTER_MODAL:
-            var modalId = action.payload.modalId;
+            var modalId = action.payload.id;
             var modalType = action.payload.modalType;
             return {
                 ...state,
@@ -37,6 +37,7 @@ export default function modalBoxes(
             };
 
         case DISMISS_MODAL:
+            var modalId = action.payload.id;
             return {
                 ...state,
                 [modalId]: {
