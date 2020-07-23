@@ -64,9 +64,14 @@ $red12: #e9dcd9;
 	@media (max-width: 374px) { @content; }
 }
 
-@mixin for-average-phones-up {
+@mixin for-mobile-medium-up {
 
     @media (min-width: 375px) { @content; }
+}
+
+@mixin for-mobile-large-up {
+
+    @media (min-width: 425px) { @content; }
 }
 
 @mixin for-tablet-portrait-up {
