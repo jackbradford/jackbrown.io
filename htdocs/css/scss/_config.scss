@@ -61,22 +61,27 @@ $red12: #e9dcd9;
  */
 @mixin for-smallest-phones {
 
-	@media (max-width: 549px) { @content; }
+	@media (max-width: 374px) { @content; }
 }
 
 @mixin for-average-phones-up {
 
-    @media (min-width: 550px) { @content; }
+    @media (min-width: 375px) { @content; }
 }
 
 @mixin for-tablet-portrait-up {
 
-	@media (min-width: 800px) { @content; }
+	@media (min-width: 768px) { @content; }
 }
 
 @mixin for-tablet-landscape-up {
 
 	@media (min-width: 950px) { @content; }
+}
+
+@mixin for-laptop-up {
+
+    @media (min-width: 1024px) { @content; }
 }
 
 @mixin for-desktop-up {
