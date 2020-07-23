@@ -6,7 +6,7 @@
 import React, { Component } from 'react';
 import ReactDOM from "react-dom";
 import { withRouter } from 'react-router';
-import { mainMenuNavItems } from '../config/main-nav-menu-items
+import { mainMenuNavItems } from '../config/main-nav-menu-items';
 import {
     BrowserRouter as Router,
     Switch,
@@ -24,6 +24,8 @@ class Header extends Component {
     constructor() {
 
         super();
+        this.getNavClass = this.getNavClass.bind(this);
+        this.goToHomepage = this.goToHomepage.bind(this);
     }
 
     goToHomepage() {

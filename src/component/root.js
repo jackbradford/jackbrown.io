@@ -12,10 +12,6 @@ import ContactUs from './contact';
 
 export default class Root extends Component {
 
-    constructor(props) {
-        super(props);
-    }
-
     render() {
 
         return (

@@ -1,13 +1,14 @@
 /**
- * @file root.js
+ * @file page.js
  * This file provides the root component, which contains the router
  * logic.
  *
  */
 import React, { Component } from 'react';
 import { Route, Switch } from 'react-router-dom';
+import SiteHeader from '../container/site-header';
 
-export default class Root extends Component {
+export default class Page extends Component {
 
     constructor(props) {
         super(props);
@@ -17,10 +18,7 @@ export default class Root extends Component {
 
         return (
             <React.Fragment>
-                <header>
-                    <h1>Jack Brown</h1>
-                    <h2>Software Developer</h2>
-                </header>
+                <SiteHeader />
                 { this.props.children }
             </React.Fragment>
         );
