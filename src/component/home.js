@@ -6,6 +6,7 @@
 import React, { Component } from 'react';
 import { Route, Switch } from 'react-router-dom';
 import SocialButtons from './social-buttons';
+import HomeHeader from '../container/home-header';
 
 export default class Home extends Component {
 
@@ -13,6 +14,8 @@ export default class Home extends Component {
 
         return (
             <React.Fragment>
+            <div className="home-page">
+            <HomeHeader />
             <section className="home-title">
                 <div className="title-container">
                     <h1>Jack Brown</h1>
@@ -53,6 +56,7 @@ export default class Home extends Component {
                     </div>
                 </div>
             </section>
+            </div>
             </React.Fragment>
         );
     }

@@ -1,6 +1,6 @@
 /**
- * @file container/site-header.js
- * This file provides the site header.
+ * @file container/home-header.js
+ * This file provides the header on the home page.
  *
  */
 import React, { Component } from 'react';
@@ -16,7 +16,7 @@ import {
 const getHeaderBar = function() {
 
     return (
-        <div className="page-header">
+        <div className="page-header home-header">
             <button className="main-menu-toggle primary-color">
                 <img src="/img/main-menu-toggle.svg" alt="Click here to show the main menu." />
             </button>
@@ -30,7 +30,7 @@ const mapStateToProps = function(state) {
 
         menuExpand: state.header.menuExpand,
         darkMode: state.header.darkMode,
-        getHeaderBar: getHeaderBar,
+        getHeaderBar: getHeaderBar
     }
 };
 

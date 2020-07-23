@@ -47,6 +47,7 @@ class Header extends Component {
 
             <React.Fragment>
             <header id="app-header">
+                { this.props.getHeaderBar() }
                 <nav id="main-menu" className={navClass}>
                     <ul className="menu-items">
                         {mainMenuNavItems.map((item, index) => {

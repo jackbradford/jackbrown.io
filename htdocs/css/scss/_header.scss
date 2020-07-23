@@ -8,5 +8,20 @@ $bottom-color: rgba(225,225,225,0.5);
 $accent-color: rgba(200,200,200,0.5);
 
 header {
+
+    overflow: hidden;
+}
+
+.home-header {
+
+    height: $header-height;
+}
+
+.page-header {
+
+    position: relative;
+    height: $header-height;
+    overflow: hidden;
+    border-bottom: $header-border-height solid #ddd;
 }
 

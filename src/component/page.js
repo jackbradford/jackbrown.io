@@ -1,7 +1,7 @@
 /**
  * @file page.js
- * This file provides the root component, which contains the router
- * logic.
+ * This file provides the page component, which can be used to add features
+ * available to all pages.
  *
  */
 import React, { Component } from 'react';
@@ -18,7 +18,6 @@ export default class Page extends Component {
 
         return (
             <React.Fragment>
-                <SiteHeader />
                 { this.props.children }
             </React.Fragment>
         );
