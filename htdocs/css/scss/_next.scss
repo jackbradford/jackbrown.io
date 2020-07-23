@@ -7,18 +7,39 @@
 .home-page {
 
     height: 100vh;
+    min-height: 480px;
     overflow: hidden;
+
+    @include for-tablet-landscape-up {
+
+        display: flex;
+        flex-wrap: wrap;
+    }
+
 }
+
+
 
 section.home-title {
 
-    height: 38vh;
-    border-top: 0px solid #fff;
+    height: 38%;
+    border-top: 1px solid #fff;
     border-bottom: 1px solid $blue11;
 
     @include for-mobile-medium-up {
 
         font-size: 120%;
+        height: calc(50% - #{$header-height});
+    }
+
+    @include for-mobile-large-up {
+
+        font-size: 135%;
+    }
+
+    @include for-tablet-landscape-up {
+
+        border-right: 1px solid $blue11;
     }
 
     .title-container {
@@ -90,15 +111,33 @@ section.home-title {
 
 section.home-intro {
 
-    height: calc(62vh - #{$header-height});
-    border-top: 0px solid #fff;
-    padding: 1.5em;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
+    height: calc(62% - #{$header-height});
+    border-top: 1px solid #fff;
 
     .home-intro-container {
 
+        padding: 1.5em;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        font-size: 90%;
+        max-width: 30em;
+        margin: 0 auto;
+
+        @include for-tablet-landscape-up {
+
+            max-height: 30em;
+            position: relative;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+    }
+
+    @include for-mobile-medium-up {
+
+        font-size: 100%;
+        height: 50%;
     }
 
     @include for-mobile-large-up {
@@ -106,11 +145,16 @@ section.home-intro {
         font-size: 120%;
     }
 
+    @include for-tablet-landscape-up {
+
+        font-size: 140%;
+        border-right: 1px solid $blue11;
+    }
+
     .featured-skill {
 
         display: flex;
         align-items: center;
-        margin-top: 1.2em;
 
         &:first-child {
 
@@ -142,6 +186,16 @@ section.home-intro {
         margin-top: 0.3em;
         color: #656565;
         line-height: 1.1em;
+    }
+}
+
+section.home-title,
+section.home-intro {
+
+    @include for-tablet-landscape-up {
+
+        height: calc(100% - #{$header-height});
+        width: 50%;
     }
 }
 

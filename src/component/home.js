@@ -24,6 +24,7 @@ export default class Home extends Component {
                 </div>
             </section>
             <section className="home-intro">
+                <div className="home-intro-container">
                 <div className="featured-skill">
                     <img src="/img/user-interface.svg" alt="A browser interface." />
                     <div className="intro-container">
@@ -54,6 +55,7 @@ export default class Home extends Component {
                             whatever tools are at hand to make the good ideas real.
                         </p>
                     </div>
+                </div>
                 </div>
             </section>
             </div>

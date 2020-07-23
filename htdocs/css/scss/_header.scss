@@ -10,6 +10,11 @@ $accent-color: rgba(200,200,200,0.5);
 header {
 
     overflow: hidden;
+
+    @include for-tablet-landscape-up {
+
+        width: 100%;
+    }
 }
 
 .home-header {
