@@ -4,6 +4,7 @@ node_modules
 error.log
 vendor/
 disphatch.conf.json
+htdocs/img
 htdocs/js/index.js
 htdocs/js/jackbrown-io.js
 htdocs/js/jackbrown-io.bundle.js
@@ -17,4 +18,5 @@ src/schema/users.sql
 tags
 htdocs/img/wallpaper*
 array-test.txt
+config/import-photos.sh
 
