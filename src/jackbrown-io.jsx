@@ -9,34 +9,27 @@ import { Router, browserHistory } from 'react-router';
 import { syncHistoryWithStore } from 'react-router-redux';
 import { createBrowserHistory } from 'history';
 import rootReducer from './reducers';
-import RootContainer from './container/root-container';
+import Root from './component/root';
 
 const store = createStore(
-    rootReducer,
-    applyMiddleware(
-        thunk
-    )
+  rootReducer,
+  applyMiddleware(thunk)
 );
+
 const history = syncHistoryWithStore(createBrowserHistory(), store);
 
-/**
- * App
- * This is the main React component for the front-end app.
- *
- */
 class App extends Component {
 
-    render() {
-
-        return (
-            <Provider store={store}>
-                <Router history={history}>
-                    <RootContainer history={history}/>
-                </Router>
-            </Provider>
-        );
-    }
+  render() {
+    return (
+      <Provider store={store}>
+        <Router history={history}>
+          <Root history={history}/>
+        </Router>
+      </Provider>
+    );
+  }
 }
 
-ReactDOM.render( <App />, document.getElementById('jackbrown-io') );
+ReactDOM.render(<App />, document.getElementById('jackbrown-io'));
 

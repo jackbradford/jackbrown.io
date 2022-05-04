@@ -6,26 +6,21 @@
  */
 import React, { Component } from 'react';
 import { Route, Switch } from 'react-router-dom';
-import Page from './page';
-import Home from './home';
-import ContactUs from './contact';
+import { mainNavigation } from 'Config';
 
-export default class Root extends Component {
+class Root extends Component {
 
-    render() {
-
-        return (
-            <React.Fragment>
-                <Route
-                    exact path='/'
-                    render={(props) => <Page> <Home {...props} /> </Page>}
-                />
-                <Route
-                    exact path='/contact'
-                    render={(props) => <Page> <ContactUs {...props} /> </Page>}
-                />
-            </React.Fragment>
-        );
-    }
+  render() {
+    return mainNavigation.map(rt => (
+      <Route
+        key={rt.path}
+        component={rt.component}
+        exact={rt.exact}
+        path={rt.path}
+      />
+    ));
+  }
 }
+
+export default Root;
 

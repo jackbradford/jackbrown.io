@@ -1,7 +1,7 @@
 {
   "name": "jackbrown.io",
   "version": "1.0.0",
-  "description": "A store for people who know that the best coffee is made at home.",
+  "description": "My personal home on the web.",
   "main": "htdocs/js/index.js",
   "dependencies": {
     "minimist": ">=1.2.2",
