@@ -12,7 +12,7 @@ module.exports = merge(common, {
       //publicPath: path.join(__dirname, "/htdocs/")
     },
     historyApiFallback: true,
-    port: 3002,
+    port: 3001,
   },
 });
 
