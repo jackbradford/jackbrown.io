@@ -1,7 +1,6 @@
 const path = require('path');
 const webpack = require("webpack");
 const HtmlWebPackPlugin = require('html-webpack-plugin');
-//const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 
 module.exports = {
   context: __dirname,
@@ -42,13 +41,6 @@ module.exports = {
       Reducers: path.resolve(__dirname, 'src/reducers/')
     },
     extensions: ['.js', '.jsx', '.ts', '.tsx', '.json', '.css', '.scss'],
-    //modules: ['src', 'node_modules']
-  },
-  //plugins: [
-  //  new HtmlWebPackPlugin({
-  //    template: path.resolve(__dirname, 'htdocs/index.php'),
-  //    filename: 'index.php'
-  //  })
-  //]
+  }
 };
 

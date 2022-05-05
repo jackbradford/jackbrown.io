@@ -9,10 +9,10 @@ module.exports = merge(common, {
     //static: path.join(__dirname, "htdocs/"),
     static: {
       directory: path.join(__dirname, 'htdocs'),
-      publicPath: "/"
+      //publicPath: path.join(__dirname, "/htdocs/")
     },
     historyApiFallback: true,
-    port: 3001,
+    port: 3002,
   },
 });
 
