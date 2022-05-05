@@ -8,8 +8,8 @@ import { Route, Switch } from 'react-router-dom';
 import { Router, browserHistory } from 'react-router';
 import { syncHistoryWithStore } from 'react-router-redux';
 import { createBrowserHistory } from 'history';
-import rootReducer from './reducers';
-import Root from './component/root';
+import rootReducer from 'Reducers';
+import Root from 'Components/root';
 
 const store = createStore(
   rootReducer,
@@ -18,18 +18,13 @@ const store = createStore(
 
 const history = syncHistoryWithStore(createBrowserHistory(), store);
 
-class App extends Component {
-
-  render() {
-    return (
-      <Provider store={store}>
-        <Router history={history}>
-          <Root history={history}/>
-        </Router>
-      </Provider>
-    );
-  }
-}
+const App = () => (
+  <Provider store={store}>
+    <Router history={history}>
+      <Root history={history}/>
+    </Router>
+  </Provider>
+);
 
 ReactDOM.render(<App />, document.getElementById('jackbrown-io'));
 

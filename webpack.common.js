@@ -1,28 +1,38 @@
 const path = require('path');
-const { CleanWebpackPlugin } = require('clean-webpack-plugin');
+const webpack = require("webpack");
+const HtmlWebPackPlugin = require('html-webpack-plugin');
+//const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 
 module.exports = {
-  entry: {
-    app: './src/jackbrown-io.jsx',
+  context: __dirname,
+  devtool: 'source-map',
+  entry: [
+    "./src/jackbrown-io.jsx",
+  ],
+  module: {
+    rules: [
+      /**
+       * Transform ES6/JSX. All js/jsx files outside node_modules/ and
+       * bower_components/ are processed via babel.
+       **/
+      {
+        test: /\.(js|jsx)$/,
+        exclude: /(node_modules|bower_components)/,
+        loader: "babel-loader",
+        options: { presets: ["@babel/env", "@babel/preset-react"] }
+      },
+      /**
+       * Process CSS.
+       **/
+      {
+        test: /\.css$/,
+        use: ["style-loader", "css-loader"]
+      }
+    ]
   },
-  plugins: [ new CleanWebpackPlugin() ],
   output: {
     filename: './jackbrown-io.bundle.js',
     path: path.resolve(__dirname, 'htdocs/js'),
-  },
-  module: {
-    rules: [
-      {
-        test: /\.jsx?$/,
-        exclude: /(node_modules)/,
-        use: {
-          loader: 'babel-loader',
-          options: {
-            presets: ['@babel/preset-env', '@babel/preset-react']
-          }
-        }
-      }
-    ]
   },
   resolve: {
     alias: {
@@ -30,7 +40,15 @@ module.exports = {
       Components: path.resolve(__dirname, 'src/component/'),
       Config: path.resolve(__dirname, 'src/config/'),
       Reducers: path.resolve(__dirname, 'src/reducers/')
-    }
-  }
+    },
+    extensions: ['.js', '.jsx', '.ts', '.tsx', '.json', '.css', '.scss'],
+    //modules: ['src', 'node_modules']
+  },
+  //plugins: [
+  //  new HtmlWebPackPlugin({
+  //    template: path.resolve(__dirname, 'htdocs/index.php'),
+  //    filename: 'index.php'
+  //  })
+  //]
 };
 

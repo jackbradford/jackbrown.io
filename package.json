@@ -4,32 +4,40 @@
   "description": "My personal home on the web.",
   "main": "htdocs/js/index.js",
   "dependencies": {
-    "minimist": ">=1.2.2",
-    "react": "^16.13.0",
-    "react-dom": "^16.13.0",
-    "react-redux": "^7.2.0",
-    "react-router-dom": "^5.1.2",
+    "@reduxjs/toolkit": "^1.6.2",
+    "axios": "^0.23.0",
+    "react": "^17.0.0",
+    "react-dom": "^17.0.0",
+    "react-hot-loader": "^4.3.11",
+    "react-redux": "^7.2.5",
+    "react-router-dom": "^5.3.0",
     "react-router-redux": "^4.0.8",
     "redux": "^4.0.5",
     "redux-thunk": "^2.3.0",
     "svg-loaders-react": "^2.2.1",
-    "webpack": "^4.42.0",
-    "webpack-cli": "^3.3.11"
+    "webpack-merge": "^5.8.0"
   },
   "devDependencies": {
-    "@babel/core": "^7.8.7",
-    "@babel/preset-env": "^7.8.7",
-    "@babel/preset-react": "^7.8.3",
-    "babel-loader": "^8.0.6",
-    "clean-webpack-plugin": "^3.0.0",
-    "html-webpack-plugin": "^3.2.0",
-    "webpack-merge": "^4.2.2"
+    "@babel/cli": "^7.1.0",
+    "@babel/core": "^7.1.0",
+    "@babel/preset-env": "^7.15.0",
+    "@babel/preset-react": "^7.16.7",
+    "babel-loader": "^8.0.2",
+    "css-loader": "^3.0.0",
+    "html-webpack-plugin": "^5.4.0",
+    "sass": "^1.38.0",
+    "style-loader": "^0.23.0",
+    "webpack": "^5.0.0",
+    "webpack-cli": "^4.9.1",
+    "webpack-dev-server": "^4.3.1"
   },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "webpack-dev-server --open --config webpack.dev.js",
     "build": "webpack --config webpack.dev.js",
-    "build-prod": "webpack --config webpack.prod.js"
+    "build-prod": "webpack --config webpack.prod.js",
+    "scss": "sass htdocs/css/scss/style.scss:htdocs/css/style.css --watch",
+    "scss-q": "sass htdocs/css/scss/style.scss:htdocs/css/style.css --watch --no-source-map",
+    "start": "webpack serve --open --host 0.0.0.0 --config webpack.dev.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Jack Brown"
 }

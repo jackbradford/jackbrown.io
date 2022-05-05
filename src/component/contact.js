@@ -1,26 +1,18 @@
 /**
  * @file contact.js
- * This file provides the Contact component.
+ * This file provides the Contact page.
  *
  */
 import React, { Component } from 'react';
-import { Route, Switch } from 'react-router-dom';
+import Page from 'Components/page';
 
-export default class Root extends Component {
+const Contact = () => (
+  <Page>
+    <section className="home">
+        <h1>Jack Brown</h1>
+    </section>
+  </Page>
+);
 
-    constructor(props) {
-        super(props);
-    }
-
-    render() {
-
-        return (
-            <React.Fragment>
-            <section className="home">
-                <h1>Jack Brown</h1>
-            </section>
-            </React.Fragment>
-        );
-    }
-}
+export default Contact;
 
